@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Мемори</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .card img {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .card.flipped img {
+            display: block;
+        }
+    </style>
+	
+</head>
+<body>
+
+<h1>Игра Мемори</h1>
+<div class="grid" id="grid"></div>
+
+<script src="./script.js" type="text/javascript"></script>
+
+</body>
+</html>
