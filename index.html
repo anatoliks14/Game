@@ -14,9 +14,9 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(6, 100px);
             gap: 10px;
-            margin-top: 20px;
+            margin-top: 1px;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Автоматическое заполнение */
         }
         .card {
             width: 100px;
@@ -27,6 +27,8 @@
             align-items: center;
             cursor: pointer;
             position: relative;
+            background-image: url('data:image/jpeg;base64,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'); /* Пример изображения в формате Base64 */
+            background-size: cover; /* Обеспечивает, что изображение заполнит карточку */
         }
         .card img {
             display: none;
@@ -37,7 +39,7 @@
             display: block;
         }
         button {
-            margin: 20px;
+            margin: 5px;
             padding: 10px;
             font-size: 16px;
             border: none;
@@ -45,21 +47,32 @@
             cursor: pointer;
         }
         button i {
-            font-size: 24px;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
 
-<h1>Игра</h1>
-<select id="difficulty">
-    <option value="easy">Легкий (4 пары)</option>
-    <option value="medium">Средний (8 пар)</option>
-    <option value="hard">Сложный (15 пар)</option>
-    <option value="extreme">Экстремальный (24 пары)</option>
-</select>
-<button id="resetButton"><i class="fas fa-sync-alt"></i></button>
+<h1>МЕМОРИ</h1>
 <div class="grid" id="grid"></div>
+<br>
+<button id="resetButton"><i class="fas fa-sync-alt"></i>
+    <label for="difficulty">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Уровень сложности:  
+        <select id="difficulty">
+            <option value="easy">Легкий</option>
+            <option value="medium">Средний</option>
+            <option value="hard">Сложный</option>
+            <option value="extreme">Повышенной сложности</option>
+        </select>
+    </label>
+</button>
+<br>
+<label for="order">Выбор карточек для игры:  
+    <select id="order">
+        <option value="sequential">в алфавитном порядке</option>
+        <option value="random">случайным образом</option>
+    </select>
+</label>
 
 <script src="./script.js" type="text/javascript"></script>
 
